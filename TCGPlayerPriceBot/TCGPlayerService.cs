@@ -23,7 +23,7 @@ namespace TCGPlayerPriceBot
             var response = client.Execute(request);
             var allProducts = JsonConvert.DeserializeObject<TCGPlayerTrendResponseModel>(response.Content).Data;
 
-            var top10 = allProducts.Take(10).ToList();
+            var top10 = allProducts.Take(x).ToList();
 
             foreach (var product in top10)
             {
